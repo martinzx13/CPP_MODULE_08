@@ -10,6 +10,7 @@
 
 int main()
 {
+	bool run = true;
 	std::string input;
 	int value;
 	std::cout << YELLOW << "Add the Structure Number of Elements : ";
@@ -18,7 +19,7 @@ int main()
 	Span vector(value);
 	try
 	{
-		while (true)
+		while (run)
 		{
 
 			std::cout << "Select an option  to perfom and acction : \n"
@@ -36,7 +37,7 @@ int main()
 			switch (value)
 			{
 			case 1:
-				std::cout << YELLOW << "______Add the vector Number of Elements : _____";
+				std::cout << YELLOW << "______Create a vector Number of Elements : ";
 				std::getline(std::cin, input);
 				value = std::atoi(input.c_str());
 				vector.vectorGenerator(value);
@@ -56,6 +57,9 @@ int main()
 			case 5:
 				std::cout << MAGENTA << "The longest span is : " << RESET << vector.longestSpan() << std::endl;
 				break;
+			case 6:
+				run = false;
+				break;
 			default:
 				break;
 			}
@@ -65,5 +69,6 @@ int main()
 	{
 		std::cout << RED << "Error : " << e.what() << std::endl;
 	}
+	std::cout << GREEN << "\n🫨  Bye 👋 👋\n" << std::endl;
 	return (0);
 }
