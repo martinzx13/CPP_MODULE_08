@@ -1,4 +1,5 @@
 #include "easyfind.hpp"
+#include <exception>
 #include <vector>
 #include <list>
 #include <map>
@@ -20,7 +21,7 @@ int main()
 		easyfind(_vector, 1);
 		easyfind(_vector, 4);
 	}
-	catch (const myException &e)
+	catch (std::exception &e)
 	{
 		std::cout << RED << e.what() << std::endl;
 	}
@@ -39,7 +40,7 @@ int main()
 		easyfind(lista, 4);
 		easyfind(lista, 6);
 	}
-	catch (const myException &e)
+	catch (std::exception &e)
 	{
 		std::cout << RED << e.what() << std::endl;
 	}
