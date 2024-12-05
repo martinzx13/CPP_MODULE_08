@@ -15,8 +15,11 @@ SRCS:= main.cpp
 
 OBJS:= $(SRCS:.cpp=.o)
 
+#Header
+HEADER:= easyfind.hpp
+
 #Rules
-all: $(NAME)
+all: $(NAME) $(HEADER)
 
 $(NAME): $(OBJS)
 	$(CPP) $(CPP_FLAGS) $(OBJS) -o $(NAME)

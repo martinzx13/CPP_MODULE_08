@@ -12,6 +12,8 @@
 template <typename T>
 
 void easyfind(const T &_container, const int &_value) {
+  if (_container.empty())
+    throw(std::runtime_error("Empty container"));
   typename T::const_iterator it =
       std::find(_container.begin(), _container.end(), _value);
   if (it == _container.end())

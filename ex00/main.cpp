@@ -10,6 +10,10 @@ int main()
 	std::cout << GREEN << "_______________ VECTOR _______________" << RESET << std::endl;
 
 	std::vector<int> _vector;
+	std::vector<int> _vector1;
+	std::cout << GREEN << "_______________ VECTOR1 _______________" << RESET << std::endl;
+
+	easyfind(_vector1, 3);
 	try
 	{
 		_vector.push_back(1);
